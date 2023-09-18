@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="container__data">
+
+            <h1>Password <br /> Generator</h1>
+
+
+            <div class="input__data">
+                <div class="input__data--pass">1a4Txe3m*%Qm^vdXs!</div>
+                <div class="input__data--icons">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="18" width="20" height="3" fill="#FF003C"/>
+                            <rect x="2" y="13" width="20" height="3" fill="#FF003C"/>
+                            <rect x="2" y="8" width="20" height="3" fill="#FF003C"/>
+                            <rect x="2" y="3" width="20" height="3" fill="#00F0FF"/>
+                            </svg>
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M20.3748 13.387V11.9902C20.3748 7.36219 16.6135 3.60938 11.9748 3.60938C10.7129 3.60783 9.46684 3.89093 8.32949 4.43761C7.19214 4.98429 6.19274 5.78047 5.4057 6.76688M3.59961 10.6106V12.0075C3.59961 16.6406 7.35898 20.3906 11.9996 20.3906C13.2579 20.3888 14.5 20.1063 15.6353 19.5636C16.7705 19.0209 17.7704 18.2318 18.5621 17.2538" stroke="#00F0FF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                            <path d="M1.5 12L3.5625 9.9375L5.71875 12M22.5 12L20.4375 14.0625L18.2812 12" stroke="#00F0FF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                            </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="btn__copy">
+
+                <a href="#" class="btn__copy--data">
+                    <span>Copy Password_</span>
+
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12.5625 5.25L19.3125 12L12.5625 18.75M18.375 12H4.6875" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                        </svg></span>
+                        
+                </a>
+
+            </div>
+
+
+            <div class="input__range"> 
+                <span class="input__count">18</span>
+                <input id="myinput" min="0" max="40" type="range" value="18" />
+            </div>
+
+
+            <div>
+
+                <form action="">
+                    <div>
+                        <input type="checkbox" class="dataChange" id="data1" data-info="upper" onchange="changeUpper('upper')" checked>
+                        <label for="data1"></label>
+                        <label class="label" for="data1">Uppercase letters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="dataChange" id="data2" data-info="lower" onchange="changeLower('lower')">
+                        <label for="data2"></label>
+                        <label class="label" for="data2">Lowercase letters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="dataChange" id="data3" data-info="num" onchange="changeNum('num')">
+                        <label for="data3"></label>
+                        <label class="label" for="data3">Numbers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="dataChange" id="data4" data-info="symb" onchange="changeSymb('symb')">
+                        <label for="data4"></label>
+                        <label class="label" for="data4">Symbols</label>
+                    </div>
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="container__password">
+
+            <h4>Password History</h4>
+
+            <div class="myCopyDatas">
+
+            </div>
+
+            <!-- <div class="allPass__box">
+                <div class="allPass__box--data">
+                    <div>
+                        <p class="pass__main">^d3>~9YDA8s}cWN9L_P^</p>
+                        <p class="pass__data">1a4Txe3m*%Qm^vdXs!</p>
+                    </div>
+                    <div class="pass__copy">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.375 22.5H6.375C6.07663 22.5 5.79048 22.3815 5.5795 22.1705C5.36853 21.9595 5.25 21.6734 5.25 21.375V6C5.25 5.80109 5.32902 5.61032 5.46967 5.46967C5.61032 5.32902 5.80109 5.25 6 5.25H21.375C21.6734 5.25 21.9595 5.36853 22.1705 5.5795C22.3815 5.79048 22.5 6.07663 22.5 6.375V21.375C22.5 21.6734 22.3815 21.9595 22.1705 22.1705C21.9595 22.3815 21.6734 22.5 21.375 22.5Z" fill="#FAFAFA"/>
+                            <path d="M5.25 3.75H18.75V2.625C18.75 2.32663 18.6315 2.04048 18.4205 1.8295C18.2095 1.61853 17.9234 1.5 17.625 1.5H2.8125C2.4644 1.5 2.13056 1.63828 1.88442 1.88442C1.63828 2.13056 1.5 2.4644 1.5 2.8125V17.625C1.5 17.9234 1.61853 18.2095 1.8295 18.4205C2.04048 18.6315 2.32663 18.75 2.625 18.75H3.75V5.25C3.75 4.85218 3.90804 4.47064 4.18934 4.18934C4.47064 3.90804 4.85218 3.75 5.25 3.75Z" fill="#FAFAFA"/>
+                            </svg></span>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="clear__history">
+
+                <a class="btn--clear">
+                    Clear history
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./vendor.js"></script>
+</body>
+</html>
